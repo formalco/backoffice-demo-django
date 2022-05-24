@@ -1,6 +1,6 @@
-# backoffice-demo-django
+# Formal Identity Propagation Demo w/ Django integration
 
-This is a Django example of using the Formal SQL commenter to propagate end-user identities through the time of database access.
+This is Formal's Django integration for propagating end-user identities through the time of database access. This ia made possible as the Formal SQL commenter package adds a [database instrumentation](https://docs.djangoproject.com/en/3.2/topics/db/instrumentation/) that adds a SQL comment to each database query.
 
 1. See `backoffice_demo_django/middleware` for the database instrumentation package you can add to your own Django project. 
 2. See `config/base.py` to see the `MIDDLEWARE` implementation that ativates the database instrumentation.
@@ -11,22 +11,23 @@ Don't hesitate to ping us here at Formal with any questions!
 
 
 
-### To run this demo, with a new database: 
-
-- add required .env files in root of project
-- See https://cookiecutter-django.readthedocs.io/en/latest/developing-locally.html `DJANGO_READ_DOT_ENV_FILE` must be `True`
-    - run `$ export DJANGO_READ_DOT_ENV_FILE=True`
+### To run this demo:
+- Clone
+- Add appropriate db credentials with .env file in root of project
+- Create a virtualenv
+- `$ pip3 install -r requirements/base.txt`
+- `$ export DJANGO_READ_DOT_ENV_FILE=True`
+    - See https://cookiecutter-django.readthedocs.io/en/latest/developing-locally.html    
 - `$ python3 manage.py migrate`
----
+- `$ python3 manage.py runserver`
 
 ---
 
-## (The frontend of this demo was bootstrapped with a Cookiecutter Django template)
+---
+# Cookiecutter boilerplate instructions below
 
 [![Built with Cookiecutter Django](https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg?logo=cookiecutter)](https://github.com/cookiecutter/cookiecutter-django/)
 [![Black code style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
-
-License: MIT
 
 ## Settings
 
