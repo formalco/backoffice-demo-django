@@ -2,16 +2,14 @@
 
 This is Formal's Django integration for propagating end-user identities through the time of database access. This ia made possible as the Formal SQL commenter package adds a [database instrumentation](https://docs.djangoproject.com/en/3.2/topics/db/instrumentation/) that adds a SQL comment to each database query.
 
-1. See `backoffice_demo_django/middleware` for the database instrumentation package you can add to your own Django project. 
-2. See `config/base.py` to see the `MIDDLEWARE` implementation that ativates the database instrumentation.
-3. We will release a go package by Wednesday.
-
+See the [Formal SQL commenter package here](https://github.com/formalco/sqlcommenter/).
 
 Don't hesitate to ping us here at Formal with any questions!
 
+---
+<br/>
 
-
-### To run this demo:
+## Running this demo
 - Clone
 - Add appropriate db credentials with .env file in root of project
 - Create a virtualenv
@@ -20,10 +18,14 @@ Don't hesitate to ping us here at Formal with any questions!
     - See https://cookiecutter-django.readthedocs.io/en/latest/developing-locally.html    
 - `$ python3 manage.py migrate`
 - `$ python3 manage.py runserver`
+<br/>
+
+
+<br/>
 
 ---
+<br/>
 
----
 # Cookiecutter boilerplate instructions below
 
 [![Built with Cookiecutter Django](https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg?logo=cookiecutter)](https://github.com/cookiecutter/cookiecutter-django/)
