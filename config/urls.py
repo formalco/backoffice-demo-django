@@ -16,6 +16,7 @@ urlpatterns = [
     path("users/", include("backoffice_demo_django.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
     # Your stuff: custom urls includes go here
+    path("pii/",include("backoffice_demo_django.pii.urls"), name="pii"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 

@@ -1,0 +1,18 @@
+{% extends "base.html" %} {% load render_table from django_tables2 %} {% load
+static %} {% block title %}PII{% endblock %} {% block content %}
+<div class="container">
+  <!-- <div class="row"> -->
+  <!-- <div class="col-sm-12"> -->
+  <p>PII table</p>
+  {% render_table objs %} {% for item in objs %}
+  <!-- <tr>  
+        <td>{{ item.first_name }}</td>
+        <td>{{ item.last_name }}</td>
+        <td>{{ item.phone }}</td>
+        <td>{{ item.eu }}</td>
+      </tr> -->
+  {% endfor %}
+  <!-- </div>
+  </div> -->
+</div>
+{% endblock content %}
